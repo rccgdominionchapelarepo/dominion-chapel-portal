@@ -1,0 +1,1 @@
+<img src="{{ asset('images/church-logo.png') }}" alt="The Light House Logo" {{ $attributes->merge(['class' => 'object-contain']) }}>
