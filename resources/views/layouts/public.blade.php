@@ -107,9 +107,9 @@
             Media <span class="chevron">▼</span>
           </button>
           <div class="dropdown-menu">
-            <a href="https://www.youtube.com/@Iam_kayodepeter/live" target="_blank" rel="noopener noreferrer">Sermons/Watch Live</a>
-            <a href="{{ route('sermons.index') }}">Gallery</a>
-            <a href="{{ url('/downloads') }}">Download Page</a>
+            <a href="https://www.youtube.com/@Iam_kayodepeter/live" target="_blank" rel="noopener noreferrer">Stream/Watch Live</a>
+            <a href="{{ route('sermons.index') }}">Dominion Blog</a>
+            <a href="{{ url('/downloads') }}">Get Magazines</a>
           </div>
         </div>
         
@@ -200,8 +200,10 @@
             <a href="https://wa.me/2348133569012" target="_blank" rel="noopener" aria-label="WhatsApp">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
             </a>
-            <a href="https://" target="_blank" rel="noopener" aria-label="Tiktok">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+           <a href="https://www.tiktok.com/@rccgdominionchapelarepo" target="_blank" rel="noopener" aria-label="Tiktok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -215,7 +217,7 @@
             <li><a href= "https://www.youtube.com/@Iam_kayodepeter/live"  target="_blank" rel="noopener">Sermons/Watch Live</a></li>
             <li><a href="{{ url('/#programs') }}">Events</a></li>
             <li><a href="{{ url('/#schedule') }}">Ministries</a></li>
-            <li><a href="{{ url('/gallery') }}">Gallery</a></li>
+            <li><a href="{{ url('/messages') }}">Domininon Blog</a></li>
             <li><a href="{{ url('/#about') }}">Who we are</a></li>
             <li><a href="{{ url('/#visit') }}">New Here</a></li>
           </ul>
@@ -262,7 +264,7 @@
             <li><a href="{{ url('/contact') }}">Prayer Request</a></li>
             <li><a href="https://wa.me/2348133569012" target="_blank" rel="noopener">Join Community</a></li>
           </ul>
-          <div style="margin-top:20px;">
+          {{-- <div style="margin-top:20px;">
             <span style="font-size:13px; color:rgba(255,255,255,0.6); display:block; margin-bottom:8px;">Subscribe to Newsletter</span>
             <form class="newsletter-form" action="https://formspree.io/f/placeholder" method="POST">
               <div class="newsletter-input-group">
@@ -270,7 +272,7 @@
                 <button type="submit">Join</button>
               </div>
             </form>
-          </div>
+          </div> --}}
         </div>
       </div>
 
