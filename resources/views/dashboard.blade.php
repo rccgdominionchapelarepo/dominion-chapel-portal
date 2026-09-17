@@ -34,7 +34,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
                         <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Total Members</div>
-                        <div class="font-fraunces text-5xl font-light text-white">1,204</div>
+                        <div class="font-fraunces text-5xl font-light text-white">{{ number_format($totalUsers) }}</div>
                     </div>
                     <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
                     <!-- Stat Card 2: Thanksgiving RSVPs (Now a clickable link!) -->
@@ -49,6 +49,23 @@
                         <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Upcoming Events</div>
                         <div class="font-fraunces text-5xl font-light text-white">4</div>
                     </div>
+                    <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
+                        <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Total Sermons</div>
+                        <div class="font-fraunces text-5xl font-light text-white">{{ number_format($totalSermons) }}</div>
+                    </div>
+                    <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
+                        <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Magazines Uploaded</div>
+                        <div class="font-fraunces text-5xl font-light text-white">{{ number_format($totalMagazines) }}</div>
+                    </div>
+                    <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
+                        <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Unread Inquiries</div>
+                        <div class="font-fraunces text-5xl font-light text-white">{{ number_format($totalInquiries) }}</div>
+                    </div>
+                    <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
+                        <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Upcoming Events</div>
+                        <div class="font-fraunces text-5xl font-light text-white">{{ number_format($totalEvents) }}</div>
+                    </div>
+                    
                 </div>
 
                 <!-- Quick Actions Section -->

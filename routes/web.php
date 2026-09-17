@@ -13,10 +13,11 @@ use App\Http\Controllers\Admin\SermonController as AdminSermonController;
 use App\Http\Controllers\SermonController;
 use App\Http\Controllers\Admin\MagazineController as AdminMagazineController;
 use App\Http\Controllers\MagazineController;
-
-
-
-
+use App\Models\User;
+use App\Models\Sermon;
+use App\Models\Magazine;
+use App\Models\Inquiry;      // Adjust if your model is named Contact or Message
+      
 
 
 
@@ -51,7 +52,24 @@ Route::post('/contact/submit', function (Request $request) {
 
 // --- Your Breeze Auth routes (Dashboard, Profile, etc.) will be down here ---
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $totalUsers = User::count();
+    $totalEvents = Event::count();
+    $totalSermons = Sermon::count();
+    $totalMagazines = Magazine::count();
+
+     // You can also filter these if you only want to count specific statuses
+    $totalInquiries = Inquiry::where('is_read', false)->count(); // Example: Unread only
+    $totalEvents = Event::count();
+    
+
+    return view('dashboard', compact(
+        'totalUsers', 
+        'totalSermons', 
+        'totalMagazines', 
+        'totalInquiries', 
+        'totalEvents', 
+    ));
+    return view('dashboard', compact('totalUsers', 'totalEvents', 'totalSermons'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
