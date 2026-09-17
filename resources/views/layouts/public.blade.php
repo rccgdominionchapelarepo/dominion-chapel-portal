@@ -128,13 +128,15 @@
         
         <a href="{{ route('contact') }}">Contact</a>
         
+       
+         <a href="{{ route('give') }}"  style="color: #D4AF37; font-weight: 600;">Give</a>
+
         @auth
-            <a href="{{ route('dashboard') }}" style="color: #D4AF37; font-weight: 600;">Dashboard</a>
+            <a href="{{ route('dashboard') }}" class="btn-gold-nav">Dashboard</a>
         @else
-            <a href="{{ route('login') }}" style="font-weight: 600;">Sign In</a>
+            <a href="{{ route('login') }}" class="btn-gold-nav">Sign In</a>
         @endauth
 
-        <a href="{{ route('give') }}" class="btn-gold-nav">Give</a>
       </nav>
       
       <button class="burger" id="burgerBtn" aria-label="Open menu">☰</button>
@@ -171,7 +173,7 @@
       }
     });
   </script>
-  
+
   <!-- Dynamic Content Injected Here -->
   @yield('content')
 
