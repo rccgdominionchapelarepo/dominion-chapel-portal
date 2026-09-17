@@ -12,7 +12,44 @@
       </div>
 
       <div class="give-grid">
-        <!-- Paste the Cards for Tithe, Offering, Partnership, and Building Project here -->
+        <div class="bank-card">
+            <h3>Direct Bank Transfers</h3>
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px; font-size: 14.5px;">
+                You can make direct transfers to the official church accounts below. 
+                <br><strong style="color: var(--gold-soft);">Account Name: RCCG Dominion Chapel Arepo</strong>
+            </p>
+
+            <div class="bank-details">
+                <!-- Tithe & Offering -->
+                <div class="bank-item">
+                    <b>Offering & Tithe</b>
+                    <span>1013520008</span>
+                    <div style="font-size: 12.5px; color: rgba(255,255,255,0.6); margin-top: 4px;">Zenith Bank</div>
+                </div>
+
+                <!-- Welfare Offering -->
+                <div class="bank-item">
+                    <b>Welfare Offering</b>
+                    <span>1310532351</span>
+                    <div style="font-size: 12.5px; color: rgba(255,255,255,0.6); margin-top: 4px;">Eco Bank</div>
+                </div>
+
+                <!-- Special Offering (Eco) -->
+                <div class="bank-item">
+                    <b>Special Offering / Project</b>
+                    <span>3782015700</span>
+                    <div style="font-size: 12.5px; color: rgba(255,255,255,0.6); margin-top: 4px;">Eco Bank</div>
+                </div>
+
+                <!-- Project Account (Zenith) -->
+                <div class="bank-item">
+                    <b>Project Account</b>
+                    <span>1310532344</span>
+                    <div style="font-size: 12.5px; color: rgba(255,255,255,0.6); margin-top: 4px;">Zenith Bank</div>
+                    <div style="font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px;">Name: RCCG Dominion Chapel - Project Acct.</div>
+                </div>
+            </div>
+        </div>
       </div>
       
       <!-- Paste the Bank Details and Transparency Card here -->
