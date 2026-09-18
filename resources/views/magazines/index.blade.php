@@ -37,8 +37,11 @@
                             </div>
                             
                             <!-- Download PDF Link -->
-                            <a href="{{ asset('storage/' . $magazine->file_path) }}" download class="mt-auto w-full inline-flex items-center justify-center gap-2 bg-[#1A243D] hover:bg-[#D4AF37] border border-[#D4AF37]/30 hover:border-[#D4AF37] text-white hover:text-[#050A15] px-4 py-3 rounded-lg font-bold text-sm transition-all duration-300 shadow-md">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v-8m0 8l-4-4m4 4l4-4"></path></svg>
+                            <a href="{{ Storage::disk('r2')->url($magazine->file_path) }}" target="_blank" rel="noopener noreferrer" download class="mt-auto w-full inline-flex items-center justify-center gap-2 bg-[#1A243D] hover:bg-[#D4AF37] border border-[#D4AF37]/30 hover:border-[#D4AF37] text-white hover:text-[#050A15] px-4 py-3 rounded-lg font-bold text-sm transition-all duration-300 shadow-md">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v-8m0 8l-4-4m4 4l4-4"></path>
+                                </svg>
                                 Download PDF
                             </a>
                         </div>

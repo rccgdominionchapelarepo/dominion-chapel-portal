@@ -39,7 +39,8 @@
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-4">
                                             <div class="h-20 w-14 shrink-0 rounded overflow-hidden border border-[#1A243D] shadow-md bg-black">
-                                                <img src="{{ asset('storage/' . $magazine->cover_image) }}" alt="Cover" class="h-full w-full object-cover">
+                                                <!-- UPDATED: R2 Cover Image -->
+                                                <img src="{{ Storage::disk('r2')->url($magazine->cover_image) }}" alt="Cover" class="h-full w-full object-cover">
                                             </div>
                                             <div>
                                                 <div class="font-bold text-white text-lg leading-tight mb-1">{{ $magazine->title }}</div>
@@ -66,8 +67,8 @@
                                     <!-- Actions -->
                                     <td class="px-6 py-4 text-right">
                                         <div class="flex items-center justify-end gap-3">
-                                            <!-- Preview PDF Button -->
-                                            <a href="{{ asset('storage/' . $magazine->file_path) }}" target="_blank" class="p-2 text-gray-400 hover:text-[#D4AF37] transition duration-300" title="View PDF">
+                                            <!-- UPDATED: R2 Preview PDF Button with rel="noopener noreferrer" -->
+                                            <a href="{{ Storage::disk('r2')->url($magazine->file_path) }}" target="_blank" rel="noopener noreferrer" class="p-2 text-gray-400 hover:text-[#D4AF37] transition duration-300" title="View PDF">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                                             </a>
 

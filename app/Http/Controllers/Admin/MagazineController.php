@@ -30,14 +30,14 @@ class MagazineController extends Controller
             'title' => 'required|string|max:255',
             'edition' => 'required|string|max:255',
             'cover_image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120', // Max 5MB for cover
-            'file' => 'required|mimes:pdf|max:120000', // Max 25MB for Magazine PDF
+            'file' => 'required|mimes:pdf|max:120000', // Max 100MB for Magazine PDF
         ]);
 
         // Upload Cover Image
-        $coverPath = $request->file('cover_image')->store('magazines/covers', 'public');
+        $coverPath = $request->file('cover_image')->store('magazines/covers', 'r2');
 
         // Upload PDF Document
-        $filePath = $request->file('file')->store('magazines/files', 'public');
+        $filePath = $request->file('file')->store('magazines/files', 'r2');
 
         Magazine::create([
             'title' => $request->title,
