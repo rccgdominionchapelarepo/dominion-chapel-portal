@@ -36,6 +36,6 @@ Ensure you have the following installed on your system:
 ### 2. Clone the Repository
 
 ```bash
-git clone [https://github.com/YOUR-USERNAME/dominion-chapel-portal.git](https://github.com/YOUR-USERNAME/dominion-chapel-portal.git)
+git clone [https://github.com/rccgdominionchapelarepo/dominion-chapel-portal.git](https://rccgdominionchapelarepo/dominion-chapel-portal.git)
 cd dominion-chapel-portal
 ```
