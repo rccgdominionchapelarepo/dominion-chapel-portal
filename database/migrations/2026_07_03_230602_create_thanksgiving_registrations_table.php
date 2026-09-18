@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('thanksgiving_registrations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->enum('type', ['individual', 'family']);
+            $table->string('type');
             $table->string('display_name'); 
             $table->json('family_members')->nullable(); 
             $table->string('quarter'); // E.g., 'Q3 2026'
