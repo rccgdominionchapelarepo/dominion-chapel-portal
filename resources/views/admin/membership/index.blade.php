@@ -41,8 +41,19 @@
                                     <td class="p-4 text-sm text-gray-500 dark:text-gray-400">
                                         {{ $family->created_at->format('M d, Y') }}
                                     </td>
-                                    <td class="p-4">
-                                        <a href="{{ route('admin.membership.show', $family->id) }}" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-medium text-sm">View Details</a>
+                                    <td class="px-6 py-5 text-right rounded-r-2xl border-y border-r border-slate-700/50 group-hover:border-sky-500/30 transition-colors">
+                                        <div class="flex items-center justify-end gap-2">
+                                            <a href="{{ route('admin.membership.show', $family->id) }}" class="inline-flex items-center justify-center bg-slate-700/50 hover:bg-sky-500 text-white font-medium text-sm px-4 py-2 rounded-xl transition-all duration-200 shadow-sm">
+                                                View
+                                            </a>
+                                            <form action="{{ route('admin.membership.destroy', $family->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to permanently delete this family and all its members? This cannot be undone.');">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="inline-flex items-center justify-center bg-slate-700/50 hover:bg-rose-500 text-white font-medium text-sm px-4 py-2 rounded-xl transition-all duration-200 shadow-sm">
+                                                    Delete
+                                                </button>
+                                            </form>
+                                        </div>
                                     </td>
                                 </tr>
                             @empty

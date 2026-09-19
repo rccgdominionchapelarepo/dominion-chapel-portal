@@ -33,4 +33,13 @@ class MembershipController extends Controller
         
         return Excel::download(new MembershipExport, 'church_membership_database.xlsx');
     }
+    public function destroy(ChurchFamily $family)
+    {
+        // Restrict deletion to admins/super-admins for security
+        abort_unless(auth()->user()->hasRole('super-admin|admin'), 403);
+        
+        $family->delete();
+        
+        return redirect()->route('admin.membership.index')->with('success', 'Household and all associated profiles deleted successfully.');
+    }
 }

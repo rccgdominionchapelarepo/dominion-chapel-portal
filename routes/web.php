@@ -120,6 +120,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/membership', [MembershipController::class, 'index'])->name('admin.membership.index');
     Route::get('/admin/membership/export', [MembershipController::class, 'export'])->name('admin.membership.export');
     Route::get('/admin/membership/{family}', [MembershipController::class, 'show'])->name('admin.membership.show');
+    Route::delete('/admin/membership/{family}', [MembershipController::class, 'destroy'])->name('admin.membership.destroy');
 });
 
 Route::get('/thanksgiving/register', [ThanksgivingRegistrationController::class, 'create'])->name('thanksgiving.create');

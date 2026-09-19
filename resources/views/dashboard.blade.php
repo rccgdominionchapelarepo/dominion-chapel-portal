@@ -89,7 +89,7 @@
                         <a href="{{ route('admin.sermons.index') }}" class="flex flex-col items-center justify-center p-6 bg-[#091124] border border-[#1A243D] rounded-xl hover:bg-[#111A30] transition duration-300">
                             <span class="text-sm font-medium text-gray-300">Manage Sermons</span>
                         </a>
-                        <a href="{{ route('admin.membership.index') }}">View Database</a>
+                        <a href="{{ route('admin.membership.index') }}" class="flex flex-col items-center justify-center p-6 bg-[#091124] border border-[#1A243D] rounded-xl hover:bg-[#111A30] transition duration-300"><span class="text-sm font-medium text-gray-300" >View Database </span></a>
                         
                     
                     </div>
