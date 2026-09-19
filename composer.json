@@ -8,6 +8,8 @@
     "require": {
         "php": "^8.2",
         "ext-gd": "*",
+        "ext-pdo_pgsql": "*",
+        "ext-pgsql": "*",
         "ext-zip": "*",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
