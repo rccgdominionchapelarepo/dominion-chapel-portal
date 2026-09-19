@@ -62,6 +62,8 @@
                         <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Upcoming Events</div>
                         <div class="font-fraunces text-5xl font-light text-white">{{ number_format($totalEvents) }}</div>
                     </div>
+                   
+                    
                     
                 </div>
 
@@ -87,7 +89,9 @@
                         <a href="{{ route('admin.sermons.index') }}" class="flex flex-col items-center justify-center p-6 bg-[#091124] border border-[#1A243D] rounded-xl hover:bg-[#111A30] transition duration-300">
                             <span class="text-sm font-medium text-gray-300">Manage Sermons</span>
                         </a>
+                        <a href="{{ route('admin.membership.index') }}">View Database</a>
                         
+                    
                     </div>
                 </div>
 

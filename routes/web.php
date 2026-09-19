@@ -17,7 +17,10 @@ use App\Models\User;
 use App\Models\Sermon;
 use App\Models\Magazine;
 use App\Models\Inquiry;      // Adjust if your model is named Contact or Message
-      
+use App\Http\Controllers\MembershipFormController;
+use App\Http\Controllers\Admin\MembershipController;
+
+
 
 
 
@@ -112,6 +115,11 @@ Route::middleware('auth')->group(function () {
     // Admin Sermon Routes
     Route::resource('admin/sermons', AdminSermonController::class, ['as' => 'admin']);
 
+
+    // Membership form and view
+    Route::get('/admin/membership', [MembershipController::class, 'index'])->name('admin.membership.index');
+    Route::get('/admin/membership/export', [MembershipController::class, 'export'])->name('admin.membership.export');
+    Route::get('/admin/membership/{family}', [MembershipController::class, 'show'])->name('admin.membership.show');
 });
 
 Route::get('/thanksgiving/register', [ThanksgivingRegistrationController::class, 'create'])->name('thanksgiving.create');
@@ -128,5 +136,10 @@ Route::get('/messages/{sermon}', [SermonController::class, 'show'])->name('sermo
 
 // Public Magazine Downloads
 Route::get('/downloads', [MagazineController::class, 'index'])->name('magazines.index');
+
+// Membership Form
+Route::get('/membership-update', [MembershipFormController::class, 'create'])->name('membership.form');
+Route::post('/membership-update', [MembershipFormController::class, 'store'])->name('membership.store');
+
 
 require __DIR__.'/auth.php';

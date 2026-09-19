@@ -71,6 +71,12 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
+        {{-- @hasanyrole('super-admin|admin|ushers')
+        <x-responsive-nav-link :href="route('admin.membership.index')" :active="request()->routeIs('admin.membership.*')">
+            {{ __('Membership') }}
+        </x-responsive-nav-link>
+        @endhasanyrole --}}
+            
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
