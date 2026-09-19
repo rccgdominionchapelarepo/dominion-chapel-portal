@@ -160,7 +160,7 @@
       <p>Whether you're new to Arepo or have driven past our gate a dozen times, Sunday mornings and Tuesday evenings are always open to you and your family.</p>
       <ul class="info-list">
         <li><div class="ic">📍</div><div><b>Address</b><span>21, Pure Water Street, Arepo, Ogun State, Nigeria</span></div></li>
-        <li><div class="ic">📞</div><div><b>Phone</b><span>+234 813 356 9012</span></div></li>
+        <li><div class="ic">📞</div><div><b>Phone</b><span>+234 803 371 6791</span></div></li>
         <li><div class="ic">🕗</div><div><b>Sunday Service</b><span>8:00 AM every Sunday</span></div></li>
       </ul>
     </div>
