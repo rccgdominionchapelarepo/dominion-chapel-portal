@@ -33,11 +33,17 @@ class MagazineController extends Controller
             'file' => 'required|mimes:pdf|max:120000', // Max 100MB for Magazine PDF
         ]);
 
-        // Upload Cover Image
-        $coverPath = $request->file('cover_image')->store('magazines/covers', 'r2');
+        // Upload Cover Image (Safely checking if file exists)
+        $coverPath = null;
+        if ($request->hasFile('cover_image')) {
+            $coverPath = $request->file('cover_image')->store('magazines/covers', 'r2');
+        }
 
-        // Upload PDF Document
-        $filePath = $request->file('file')->store('magazines/files', 'r2');
+        // Upload PDF Document (Safely checking if file exists)
+        $filePath = null;
+        if ($request->hasFile('file')) {
+            $filePath = $request->file('file')->store('magazines/files', 'r2');
+        }
 
         Magazine::create([
             'title' => $request->title,
@@ -49,18 +55,19 @@ class MagazineController extends Controller
 
         return redirect()->route('admin.magazines.index')->with('success', 'Magazine published successfully!');
     }
+
     public function destroy(Magazine $magazine)
     {
         abort_unless(auth()->user()->hasRole('super-admin|admin'), 403);
 
-        // Delete the cover image from the server
+        // Delete the cover image from Cloudflare R2
         if ($magazine->cover_image) {
-            Storage::disk('public')->delete($magazine->cover_image);
+            Storage::disk('r2')->delete($magazine->cover_image);
         }
 
-        // Delete the PDF document from the server
+        // Delete the PDF document from Cloudflare R2
         if ($magazine->file_path) {
-            Storage::disk('public')->delete($magazine->file_path);
+            Storage::disk('r2')->delete($magazine->file_path);
         }
 
         // Delete the database record

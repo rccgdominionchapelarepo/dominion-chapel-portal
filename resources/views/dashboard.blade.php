@@ -45,10 +45,7 @@
                             <div class="font-fraunces text-5xl font-light text-white group-hover:text-[#D4AF37] transition">View &rarr;</div>
                         </a>
                     </div>
-                    <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
-                        <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Upcoming Events</div>
-                        <div class="font-fraunces text-5xl font-light text-white">4</div>
-                    </div>
+                    
                     <div class="bg-[#091124] border border-[#1A243D] rounded-xl p-6 shadow-lg">
                         <div class="font-mono-brand text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-3">Total Sermons</div>
                         <div class="font-fraunces text-5xl font-light text-white">{{ number_format($totalSermons) }}</div>

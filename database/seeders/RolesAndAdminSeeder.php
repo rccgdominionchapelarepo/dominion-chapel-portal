@@ -34,26 +34,15 @@ class RolesAndAdminSeeder extends Seeder
         }
 
         // 2. Create Roles & Assign Specific Permissions
-        // Ushers
-        // This role is for users who manage event registrations, view user data, and handle testimonies.
-        $usherRole = Role::create(['name' => 'Ushers']);
-        $usherRole->givePermissionTo(['view-users', 'view-registrations', 'export-thanksgiving', 'review-testimonies']);
+        $usherRole = Role::create(['name' => 'ushers']); // Or whatever your app expects
+        $mediaRole = Role::create(['name' => 'media-and-communications']); 
 
-        // Media & Communications
-        // This role is for users who manage content, send notifications, and handle media resources.
-        $mediaRole = Role::create(['name' => 'Media & Communications']);
-        $mediaRole->givePermissionTo(['create-content', 'edit-content', 'publish-content', 'manage-resources', 'send-notifications', 'manage-templates']);
-
-        // Admin
-        // This role is for users who have broad access to manage users and roles, but with some restrictions, e.g they cannot delete users or assign roles to others.
-        $adminRole = Role::create(['name' => 'Admin']);
+        $adminRole = Role::create(['name' => 'admin']);
         $adminRole->givePermissionTo(Permission::all());
-        $adminRole->revokePermissionTo(['assign-roles', 'delete-users']); // Admins can't delete users or make other admins
+        $adminRole->revokePermissionTo(['assign-roles', 'delete-users']);
 
-        // Super Admin & Member (Permissions for Super Admin handled via Gate later)
-        $superAdminRole = Role::create(['name' => 'Super Admin']);
-        $memberRole = Role::create(['name' => 'Member']); 
-
+        $superAdminRole = Role::create(['name' => 'super-admin']);
+        $memberRole = Role::create(['name' => 'member']);
         // 3. Create Your Super Admin User Account
         $superAdmin = User::create([
             'name' => 'Aroyewun Oluwatobiloba John',
