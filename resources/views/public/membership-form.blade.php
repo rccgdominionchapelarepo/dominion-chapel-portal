@@ -19,18 +19,18 @@
             @csrf
             
             <!-- FAMILY / PRIMARY CONTACT -->
-            <h3 class="text-xl font-semibold border-b pb-2 mb-4">1. Family / Household Contact Details</h3>
+            <h3 class="text-xl font-semibold border-b pb-2 mb-4">1. Family Contact Details</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div>
                     <label class="block font-medium">Family Name (Surname)</label>
                     <input type="text" name="family_name" required class="w-full border p-2 rounded mt-1">
                 </div>
                 <div>
-                    <label class="block font-medium">Family Email Address <span class="text-red-500">*</span></label>
+                    <label class="block font-medium">Email Address <span class="text-red-500">*</span></label>
                     <input type="email" name="email" required class="w-full border p-2 rounded mt-1">
                 </div>
                 <div>
-                    <label class="block font-medium">Primary Phone Number</label>
+                    <label class="block font-medium">Whatsapp Phone Number</label>
                     <input type="text" name="phone_number" class="w-full border p-2 rounded mt-1">
                 </div>
                 <div>
@@ -38,11 +38,11 @@
                     <input type="text" name="home_address" class="w-full border p-2 rounded mt-1">
                 </div>
                 <div>
-                    <label class="block font-medium">Emergency Contact Name</label>
+                    <label class="block font-medium">Next of kin name</label>
                     <input type="text" name="emergency_contact_name" class="w-full border p-2 rounded mt-1">
                 </div>
                 <div>
-                    <label class="block font-medium">Emergency Contact Phone</label>
+                    <label class="block font-medium">Next of Kin Phone Number</label>
                     <input type="text" name="emergency_contact_phone" class="w-full border p-2 rounded mt-1">
                 </div>
             </div>
@@ -52,10 +52,10 @@
             <div id="members-container">
                 <!-- Member Template Block -->
                 <div class="member-block bg-gray-50 p-4 border rounded mb-4" data-index="0">
-                    <h4 class="font-bold mb-3 member-title">Member 1 (Head of Household / Single Individual)</h4>
+                    <h4 class="font-bold mb-3 member-title">Member 1</h4>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
-                            <label class="block font-medium">Full Legal Name <span class="text-red-500">*</span></label>
+                            <label class="block font-medium">Full Name <span class="text-red-500">*</span></label>
                             <input type="text" name="members[0][full_name]" required class="w-full border p-2 rounded mt-1">
                         </div>
                         <div>
@@ -63,7 +63,7 @@
                             <input type="text" name="members[0][preferred_name]" class="w-full border p-2 rounded mt-1">
                         </div>
                         <div>
-                            <label class="block font-medium">Date of Birth (Optional)</label>
+                            <label class="block font-medium">Date of Birth</label>
                             <input type="date" name="members[0][dob]" class="w-full border p-2 rounded mt-1">
                         </div>
                         <div>
@@ -115,7 +115,7 @@
                     </div>
                     
                     <div class="mt-4">
-                        <label class="block font-medium mb-2">Unit in Church (Optional) </label>
+                        <label class="block font-medium mb-2">Unit in Church</label>
                         <input type="text" 
                             name="members[0][areas_to_serve]" 
                             placeholder="e.g. Choir, Ushering, Media, Children's Teacher" 
