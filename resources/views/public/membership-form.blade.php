@@ -115,7 +115,7 @@
                     </div>
                     
                     <div class="mt-4">
-                        <label class="block font-medium mb-2">Areas to Serve(OPTIONAL) </label>
+                        <label class="block font-medium mb-2">Unit in Church (Optional) </label>
                         <input type="text" 
                             name="members[0][areas_to_serve]" 
                             placeholder="e.g. Choir, Ushering, Media, Children's Teacher" 
