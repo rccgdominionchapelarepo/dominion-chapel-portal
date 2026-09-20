@@ -20,6 +20,7 @@ class MembershipFormController extends Controller
             'members' => 'required|array|min:1',
             'members.*.full_name' => 'required|string|max:255',
             'members.*.church_group' => 'required|string',
+            'members.*.areas_to_serve' => 'nullable|string|max:255',
         ]);
 
         $family = ChurchFamily::create([

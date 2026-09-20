@@ -14,7 +14,7 @@ class ChurchMember extends Model
 
     // Automatically handles data type conversions
     protected $casts = [
-        'areas_to_serve' => 'array', // Automatically encodes/decodes the checkbox JSON data
+         // Automatically encodes/decodes the checkbox JSON data
         'dob' => 'date',
     ];
 

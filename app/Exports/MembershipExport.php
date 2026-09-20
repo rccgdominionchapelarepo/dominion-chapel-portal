@@ -31,7 +31,8 @@ class MembershipExport implements FromCollection, WithHeadings, WithMapping
         $finalFamilyName = $cleanName . ' Family';
 
         // Convert the JSON array of checkboxes back into a readable comma-separated string
-        $areasToServe = is_array($member->areas_to_serve) ? implode(', ', $member->areas_to_serve) : '';
+        ;// The str_replace ensures that if any old test data was saved as an array, it exports cleanly.
+        $areasToServe = $member->areas_to_serve ? trim(str_replace(['[', ']', '"'], '', $member->areas_to_serve)) : 'N/A';
 
         return [
             $finalFamilyName,

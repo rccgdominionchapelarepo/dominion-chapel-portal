@@ -116,14 +116,10 @@
                     
                     <div class="mt-4">
                         <label class="block font-medium mb-2">Areas to Serve(OPTIONAL) </label>
-                        <div class="flex flex-wrap gap-4">
-                            <label><input type="checkbox" name="members[0][areas_to_serve][]" value="Choir"> Choir</label>
-                            <label><input type="checkbox" name="members[0][areas_to_serve][]" value="Media"> Media</label>
-                            <label><input type="checkbox" name="members[0][areas_to_serve][]" value="Ushering"> Ushering</label>
-                            <label><input type="checkbox" name="members[0][areas_to_serve][]" value="Youth"> Youth</label>
-                            <label><input type="checkbox" name="members[0][areas_to_serve][]" value="Hospitality"> Hospitality</label>
-                            <label><input type="checkbox" name="members[0][areas_to_serve][]" value="Prayer"> Prayer</label>
-                        </div>
+                        <input type="text" 
+                            name="members[0][areas_to_serve]" 
+                            placeholder="e.g. Choir, Ushering, Media, Children's Teacher" 
+                            class="w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
                     </div>
                 </div>
             </div>

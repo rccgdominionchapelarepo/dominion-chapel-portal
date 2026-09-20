@@ -89,16 +89,15 @@
                             <span class="text-gray-100 text-base font-medium">{{ $member->water_baptism ?: 'N/A' }}</span>
                         </div>
                         
-                        <div class="col-span-1 sm:col-span-2 md:col-span-3 border-t-2 border-slate-700/70 pt-6 mt-2">
-                            <span class="text-yellow-500 text-xs uppercase font-bold tracking-widest block mb-4">Areas to Serve</span>
-                            @if(is_array($member->areas_to_serve) && count($member->areas_to_serve) > 0)
-                                <div class="flex flex-wrap gap-3">
-                                    @foreach($member->areas_to_serve as $area)
-                                        <span class="bg-slate-800 border-2 border-slate-700 text-gray-200 text-sm font-bold px-5 py-2 rounded-full hover:border-yellow-500/50 transition cursor-default">{{ $area }}</span>
-                                    @endforeach
-                                </div>
+                        <div class="col-span-1 sm:col-span-2 md:col-span-3 border-t border-gray-100 pt-5 mt-2">
+                            <span class="text-sm font-bold text-gray-700 block mb-3">Areas to Serve</span>
+                            @if($member->areas_to_serve)
+                                <!-- Adding str_replace to cleanly format any old test arrays still in the database -->
+                                <span class="bg-gray-100 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md inline-block">
+                                    {{ trim(str_replace(['[', ']', '"'], '', $member->areas_to_serve)) }}
+                                </span>
                             @else
-                                <span class="text-slate-500 italic text-base">No service areas selected</span>
+                                <span class="text-gray-400 italic text-sm">No service areas specified</span>
                             @endif
                         </div>
                     </div>
