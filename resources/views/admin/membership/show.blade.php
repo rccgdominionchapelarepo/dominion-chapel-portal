@@ -61,6 +61,14 @@
                             <span class="text-lg text-yellow-500 font-medium tracking-wide">("{{ $member->preferred_name }}")</span>
                         @endif
                     </h4>
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 block mb-1">Personal Email</span> 
+                        <span class="text-gray-900">{{ $member->email ?: 'N/A' }}</span>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium text-gray-500 block mb-1">Personal Phone</span> 
+                        <span class="text-gray-900">{{ $member->phone_number ?: 'N/A' }}</span>
+                    </div>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6">
                         <div>

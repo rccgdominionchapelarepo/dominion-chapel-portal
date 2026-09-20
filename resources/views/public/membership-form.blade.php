@@ -30,7 +30,7 @@
                     <input type="email" name="email" required class="w-full border p-2 rounded mt-1">
                 </div>
                 <div>
-                    <label class="block font-medium">Whatsapp Phone Number</label>
+                    <label class="block font-medium">Phone Number</label>
                     <input type="text" name="phone_number" class="w-full border p-2 rounded mt-1">
                 </div>
                 <div>
@@ -61,6 +61,14 @@
                         <div>
                             <label class="block font-medium">Preferred Name</label>
                             <input type="text" name="members[0][preferred_name]" class="w-full border p-2 rounded mt-1">
+                        </div>
+                        <div>
+                            <label class="block font-medium">Email Address</label>
+                            <input type="email" name="members[0][email]" class="w-full border p-2 rounded mt-1">
+                        </div>
+                        <div>
+                            <label class="block font-medium">Phone Number</label>
+                            <input type="text" name="members[0][phone_number]" class="w-full border p-2 rounded mt-1">
                         </div>
                         <div>
                             <label class="block font-medium">Date of Birth</label>

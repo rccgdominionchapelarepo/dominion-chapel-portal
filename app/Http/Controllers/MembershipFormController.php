@@ -19,6 +19,8 @@ class MembershipFormController extends Controller
             'email' => 'required|email|max:255',
             'members' => 'required|array|min:1',
             'members.*.full_name' => 'required|string|max:255',
+            'members.*.email' => 'nullable|email|max:255',        // <-- Add this
+            'members.*.phone_number' => 'nullable|string|max:20',
             'members.*.church_group' => 'required|string',
             'members.*.areas_to_serve' => 'nullable|string|max:255',
         ]);

@@ -38,6 +38,8 @@ class MembershipExport implements FromCollection, WithHeadings, WithMapping
             $finalFamilyName,
             $member->full_name,
             $member->preferred_name,
+            $member->email ?: 'N/A',         // <-- Add this
+            $member->phone_number ?: 'N/A',
             $member->dob ? $member->dob->format('d/M/Y') : 'N/A',
             $member->gender,
             $member->marital_status,
